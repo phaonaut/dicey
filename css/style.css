@@ -1,0 +1,169 @@
+/* --- BASIC SETUP --- */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  background-image: url("../img/bg_images/shattered-island.gif");
+  color: white;
+}
+/* --- END OF BASIC SETUP --- */
+
+
+/* --- START VISUAL STYLES --- */
+
+.topBar { background-color: rgba(0,0,0,.5); }
+
+.circleButton {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+  border: 8px solid rgba(255,255,255,.8);
+  background-color: transparent;
+  border-radius: 60px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  margin: 20px;
+}
+
+.circleButton.roll:hover {
+  box-shadow: 0px 0px 15px rgba(244, 206, 66, 1);
+}
+
+/* Animaing Die*/
+.dieShake {
+  animation-name: shake;
+  animation-duration: .5s;
+}
+@keyframes shake {
+    0%   {filter: blur(3px); transform: rotate(80deg);}
+    25%  {filter: blur(3px); transform: rotate(-80deg);}
+    50%  {filter: blur(3px); transform: rotate(80deg);}
+    75%  {filter: blur(3px); transform: rotate(-80deg);}
+    100% {filter: blur(3px); transform: rotate(80deg);}
+}
+
+/* --- END OF VISUAL STYLES --- */
+
+
+
+/* --- START OF FLEX CONTAINERS --- */
+
+.container, .topBar, .dieBox, .dieDrawer, .insideDrawer {
+  display: flex;
+  flex: 1 100%;
+}
+
+.container {
+  flex-wrap: wrap;
+}
+
+.topBar {
+  height: 20vh;
+  justify-content: space-between;
+}
+.diceyLogo{
+  display: flex;
+  flex-grow: 3;
+  align-items: center;
+  justify-content: center;
+}
+.rollButton, .dieCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.dieBox {
+  height: 60vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dieBox div {
+
+
+}
+.die {
+  height: 100%;
+  width: 100%;
+}
+.dieDrawer {
+  justify-content: center;
+  height: 20vh;
+  align-items: center;
+  background-color: rgba(0,0,0,.5);
+  padding-top: 5px;
+}
+.miniDie {
+  height: 40px;
+  padding: 0 20px;
+}
+/* --- END OF FLEX CONTAINERS --- */
+
+
+
+/* --- START OF MEDIA QUERY --- */
+
+@media (min-width: 800px) {
+  .circleButton {
+    color: white;
+    font-size: 3em;
+    font-weight: bolder;
+    border: 8px solid rgba(255,255,255,.8);
+    background-color: transparent;
+    border-radius: 60px;
+    width: 110px;
+    height: 110px;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .insideDrawer {
+    padding: 10px 0;
+  }
+
+  .miniDie {
+    height: 90px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .circleButton {
+    font-size: 1em;
+    border: 6px solid rgba(255,255,255,.8);
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+  }
+  .dieBox {
+    height: 50vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .insideDrawer {
+    padding: 10px 0;
+  }
+
+  .miniDie {
+    height: 40px;
+    padding: 0 40px;
+  }
+}
+/* --- END OF MEDIA QUERY --- */

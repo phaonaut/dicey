@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dicey - Die Rolling Simulator</title>
+  <link rel="stylesheet" href="build/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="topBar">
+      <div class="rollButton">
+        <button onclick="roll()" class="roll circleButton">Roll</button>
+      </div>
+      <div class="diceyLogo">
+        <img src="img/dicey_logo_white.png">
+      </div>
+      <div class="dieCounter">
+        <button id="counter" class="circleButton">0</button>
+      </div>
+    </div>
+
+    <div class="dieBox">
+      <div>
+        <img class="die d6" src="img/d6_1.png">
+      </div>
+      <div>
+      <img class="die d6" src="img/d6_1.png">
+      </div>
+      <div>
+        <img class="die d6" src="img/d6_1.png">
+      </div>
+
+
+
+    </div>
+
+    <div class="dieDrawer">
+        <div><img class="miniDie addD4" src="img/d4_icon.png"></div>
+        <div><img class="miniDie addD6" src="img/d6_icon.png"></div>
+        <div><img class="miniDie addD8" src="img/d8_icon.png"></div>
+        <div><img class="miniDie addD10" src="img/d10_icon.png"></div>
+        <div><img class="miniDie clear" src="img/clear.png"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
